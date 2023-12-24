@@ -2,6 +2,7 @@ import express from "express";
 import { config } from "./config.js";
 import db from "./db/dbConfig.js";
 import  router  from "./routes/indexRouter.js";
+import compression from "compression";
 
 const app = express();
 const PORT = config.port;
@@ -19,6 +20,7 @@ dbConnect();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(compression());
 
 app.use("/api/", router);
 
