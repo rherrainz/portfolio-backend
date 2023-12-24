@@ -1,13 +1,13 @@
 import {Router} from 'express';
-import {userRouter} from './userRouter.js';
-import {educationRouter} from './educationRouter.js';
-import {projectsRouter} from './projectsRouter.js';
+import userRouter from './userRouter.js';
+import educationRouter from './educationRouter.js';
+import projectsRouter from './projectsRouter.js';
 
 
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.render('indexRouter')
+    res.send('indexRouter')
 });
 
 router.use('/user', userRouter);

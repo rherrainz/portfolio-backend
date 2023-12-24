@@ -1,7 +1,7 @@
 import express from "express";
 import { config } from "./config.js";
 import db from "./db/dbConfig.js";
-import  router  from "./routes/indexRoute.js";
+import  router  from "./routes/indexRouter.js";
 
 const app = express();
 const PORT = config.port;
